@@ -1,6 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SpatieController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +22,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/role', [SpatieController::class, 'role'])->name('role');
+
+Route::get('/permission', [SpatieController::class, 'permission'])->name('permission');
+
+Route::get('/assign/{id}', [SpatieController::class, 'assign'])->name('assign');
