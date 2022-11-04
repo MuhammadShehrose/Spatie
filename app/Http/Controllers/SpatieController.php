@@ -22,8 +22,9 @@ class SpatieController extends Controller
 
     public function assign($id)
     {
-        $role = $id;
-        $role->givePermissionTo("1");
+        $role = Role::find($id);
+        $permission = Permission::find($id);
+        $role->givePermissionTo($permission);
         return "Permission Assigned";
     }
 }
