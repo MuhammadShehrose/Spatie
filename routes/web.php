@@ -28,3 +28,5 @@ Route::get('/role', [SpatieController::class, 'role'])->name('role');
 Route::get('/permission', [SpatieController::class, 'permission'])->name('permission');
 
 Route::get('/assign/{id}', [SpatieController::class, 'assign'])->name('assign');
+
+Route::get('/user', [SpatieController::class, 'user'])->name('user');
