@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FormController;
 use App\Http\Controllers\SpatieController;
 
 /*
@@ -30,3 +31,6 @@ Route::get('/permission', [SpatieController::class, 'permission'])->name('permis
 Route::get('/assign/{id}', [SpatieController::class, 'assign'])->name('assign');
 
 Route::get('/user', [SpatieController::class, 'user'])->name('user');
+
+
+Route::get('/form', [FormController::class, 'form'])->name('form');
